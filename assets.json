@@ -1,0 +1,31 @@
+{
+  "icon": {
+    "source": "assets/icon.png",
+    "output": {
+      "android": {
+        "mipmap-hdpi": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "mipmap-mdpi": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "mipmap-xhdpi": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "mipmap-xxhdpi": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "mipmap-xxxhdpi": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+      }
+    }
+  },
+  "splash": {
+    "source": "assets/splash.png",
+    "output": {
+      "android": {
+        "drawable-land-hdpi": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+        "drawable-land-mdpi": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+        "drawable-land-xhdpi": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+        "drawable-land-xxhdpi": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+        "drawable-land-xxxhdpi": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+        "drawable-port-hdpi": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+        "drawable-port-mdpi": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+        "drawable-port-xhdpi": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+        "drawable-port-xxhdpi": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+        "drawable-port-xxxhdpi": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png"
+      }
+    }
+  }
+} 

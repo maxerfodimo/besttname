@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate App Icon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .icon-preview {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px auto;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            background: #5a6fd8;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BesttName App Icon Generator</h1>
+        
+        <div class="icon-preview">BN</div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click "Generate Icon" to create a 1024x1024 PNG icon</li>
+                <li>Right-click on the generated icon and "Save image as..."</li>
+                <li>Save it as "icon.png" in your project root</li>
+                <li>Then run the Capacitor icon generation command</li>
+            </ol>
+        </div>
+        
+        <button class="button" onclick="generateIcon()">Generate Icon</button>
+        <button class="button" onclick="downloadIcon()">Download Icon</button>
+        
+        <canvas id="iconCanvas" width="1024" height="1024" style="display: none;"></canvas>
+    </div>
+
+    <script>
+        function generateIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 1024, 1024);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Fill background
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1024, 1024);
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 200px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('BN', 512, 512);
+            
+            // Add decorative elements
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.beginPath();
+            ctx.arc(512, 700, 20, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.beginPath();
+            ctx.arc(512, 750, 15, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+            ctx.beginPath();
+            ctx.arc(512, 790, 10, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            canvas.style.display = 'block';
+        }
+        
+        function downloadIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const link = document.createElement('a');
+            link.download = 'icon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Auto-generate on load
+        window.onload = function() {
+            generateIcon();
+        };
+    </script>
+</body>
+</html> 
