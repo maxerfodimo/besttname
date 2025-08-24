@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
+import Quotes from './pages/Quotes';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/quotes" element={<Quotes />} />
         </Routes>
       </div>
     </Router>

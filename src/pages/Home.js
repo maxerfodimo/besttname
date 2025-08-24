@@ -16,15 +16,20 @@ function Home() {
   return (
     <div className="page">
       <div className="page-content">
-        <h1>You is unique</h1>
+        <h1>You are unique</h1>
         <h2>{userName} is one of the <span className="highlight">besttname</span> in the world</h2>
         <div className="navigation-buttons">
+        <Link to="/settings" className="nav-button">
+            Enter your name
+          </Link>
+
+          <Link to="/quotes" className="nav-button">
+            Quotes
+          </Link>
           <Link to="/about" className="nav-button">
             About
           </Link>
-          <Link to="/settings" className="nav-button">
-            Change name
-          </Link>
+
         </div>
       </div>
     </div>

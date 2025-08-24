@@ -1,6 +1,6 @@
 {
   "name": "besttname",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^7.4.2",
@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ba": "npx cap sync",
+    "open:android": "npx cap open android",
     "generate": "npx @capacitor/assets generate"
     
   },
